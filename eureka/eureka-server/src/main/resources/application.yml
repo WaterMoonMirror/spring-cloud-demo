@@ -1,0 +1,21 @@
+spring:
+  application:
+    # 服务名称
+    name: eureka-server
+server:
+  # 服务端口
+  port: 20000
+  # eureka 配置
+eureka:
+  instance:
+    hostname: localhost
+  client:
+#    指示此客户端是否应从eureka服务器获取eureka注册表信息
+    fetch-registry: false
+#    指示此实例是否应在eureka服务器上注册其信息以供他人发现。在某些情况下，您不希望发现实例，而只希望发现其他实例。
+    register-with-eureka: false
+#  server:
+#    # 强制关闭服务自保（自动开关不起作用）
+#    enable-self-preservation: false
+#    # 每隔多久触发一次服务剔除
+#    eviction-interval-timer-in-ms: 1000
