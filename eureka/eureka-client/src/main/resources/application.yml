@@ -1,0 +1,20 @@
+spring:
+  application:
+    # 服务名称
+    name: eureka-clinet
+server:
+  # 服务端口
+  port: 20010
+  # eureka 配置
+eureka:
+  client:
+    #    可用区映射到与eureka服务器通信的标准URL列表。每个值可以是单个URL或用逗号分隔的替代位置列表。通常，尤里卡服务器URL带有协议，主机，端口，上下文和版本信息（如果有
+    serviceUrl:
+      defaultZone: http://localhost:20000/eureka/
+#  instance:
+    #    指示eureka客户端需要多长时间（以秒为单位）将心跳发送到eureka服务器，以指示其仍处于活动状态。如果在leaseExpirationDurationInSeconds中指定的时间段内未收到心跳，则eureka服务器将通过禁止访问该实例的流量从该实例的视图中删除该实例。请注意，如果实例实现HealthCheckCallback，然后决定使其自身不可用，则该实例仍无法获得流量。
+    # 每隔5秒钟，向服务中心发送一条续约指令
+#    lease-renewal-interval-in-seconds: 5
+    #    指示从接收到最后一个心跳以来，尤里卡服务器等待的时间（以秒为单位），它可以通过禁止到该实例的流量从其视图中删除该实例。将该值设置得太长可能意味着即使实例未处于活动状态，也可以将流量路由到该实例。将此值设置得太小可能意味着该实例可能由于临时的网络故障而无法进行通信。此值应至少设置为高于leaseRenewalIntervalInSeconds中指定的值。
+    # 如果30秒内，依然没有收到续约请求，判定服务过期（上西天）
+#    lease-expiration-duration-in-seconds: 30
