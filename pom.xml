@@ -8,6 +8,7 @@
         <module>eureka/eureak-consumer</module>
         <module>eureka/eureka-server-peer</module>
         <module>eureka/eureka-server-peer2</module>
+        <module>ribbon/ribbon-consumer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
