@@ -1,0 +1,30 @@
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+
+#  一、基础使用
+#
+#  查看健康状况
+#  http://localhost:8080/actuator/health
+#
+#  查看各种监控指标jvm的请求的等等
+#  http://localhost:8080/actuator/metrics
+#
+#  查看配置信息
+#  http://localhost:8080/actuator/configprops
+#
+#  查看日志
+#  http://localhost:8080/actuator/loggers
+#
+#
+#  查看内存使用情况
+#  https://cunchu.51240.com/ 转换网址
+#  http://localhost:8080/actuator/metrics/jvm.memory.used
